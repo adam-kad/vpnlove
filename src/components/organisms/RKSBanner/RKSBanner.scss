@@ -1,0 +1,120 @@
+.rks-banner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(135deg, #f0f8ff, #d6eaff);
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  &:hover .rks-banner__title {
+    color: var(--color-45);
+  }
+}
+
+.rks-banner__logo-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 25%;
+  margin-left: 60px;
+}
+
+.rks-banner__logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.rks-banner__content {
+  flex: 2;
+  padding: 5px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rks-banner__title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.rks-banner__price {
+  font-size: 16px;
+  color: var(--color-50b);
+}
+
+.rks-banner__old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.rks-banner__title-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.rks-banner__feature {
+  font-size: 10px;
+  font-weight: 500;
+  color: #1d67b4;
+  background: #d6eaff;
+  padding: 2px 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .rks-banner {
+    padding: 20px 15px;
+  }
+  .rks-banner__logo-container {
+    margin-left: 40px;
+  }
+  .rks-banner__content {
+    padding: 0 20px;
+  }
+
+  .rks-banner__logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .rks-banner__title {
+    font-size: 22px;
+  }
+
+  .rks-banner__feature {
+    font-size: 8px;
+    padding: 1px 4px;
+  }
+
+  .rks-banner__price {
+    padding: 0;
+  }
+}
+
+@media (max-width: 408px) {
+    .rks-banner {
+        align-items: center;
+    }
+    .rks-banner__title-container {
+        flex-direction: column-reverse;
+        gap: 1px;
+    }
+    .rks-banner__price {
+        padding: 0;
+    }
+}

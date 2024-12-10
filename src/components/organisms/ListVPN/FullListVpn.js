@@ -5,6 +5,7 @@ import { observer } from 'mobx-react';
 import FullListItem from './FullListItem';
 import { FiltersVPN } from '../';
 import { VPNsStore } from '../../../stores/';
+import { RKSBanner } from '../';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import './ListVPN.scss';
@@ -15,6 +16,7 @@ const FullListVpn = observer(() => {
   return (
     <>
       <FiltersVPN />
+      <RKSBanner />
       <div className="vpn-list__inner">
         {isLoadedVPNs ? (
           <>
